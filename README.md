@@ -2,6 +2,14 @@
 
 Extract yearly FDI catalog from pdf to csv file, and clean csv file to be used for next step. Some of catalogs are copied and pasted from original website to excel, so there is no extract code, only clean code.
 
+## Code
+Each year related code has been saved in the save folder.
+Include:
+
+- Extract_yyy.py
+- Clean_yyyy.py
+- find_all_parenthesis.py
+
 ## Catalog Year
 - 1995
 - 1997
@@ -30,5 +38,8 @@ PDF extractor will extract data from the pdf file and save to csv file. This is 
 ## Merge Result
  Merge FDI catalogs with CIC result and append all together to be one csv file. 
  
+## Note
+Result after isolating limitation may need to be modified manually.
+
 # Author
 Xinyue Zhang
