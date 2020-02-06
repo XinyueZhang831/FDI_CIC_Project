@@ -30,5 +30,5 @@ PDF extractor will extract data from the pdf file and save to csv file. This is 
 ## Merge Result
  Merge FDI catalogs with CIC result and append all together to be one csv file. 
  
-#Author
+# Author
 Xinyue Zhang
