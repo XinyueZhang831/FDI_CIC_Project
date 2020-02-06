@@ -6,9 +6,10 @@ Extract yearly FDI catalog from pdf to csv file, and clean csv file to be used f
 Each year related code has been saved in the save folder.
 Include:
 
-- Extract_yyy.py
-- Clean_yyyy.py
+- extract_yyy.py
+- clean_yyyy.py
 - find_all_parenthesis.py
+- merge_result.py
 
 ## Catalog Year
 - 1995
