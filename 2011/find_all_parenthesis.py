@@ -13,7 +13,7 @@ def read_in_file(path):
     #result = add_industry(result)
     #result = split_item_by_symbol(result)
     result = replace_parentheses(result, split_list)
-    result.to_csv('2007_par.csv')
+    result.to_csv('/Users/xinyue/PycharmProjects/cic_project/hand_in/2015/2015_catalog.csv')
 
 
 def find_all_parenthesis(df):
@@ -25,7 +25,7 @@ def find_all_parenthesis(df):
         for j in text:
             if ('中外' in j) |('中方' in j) |('外资' in j) |('合资' in j) |('合作' in j):#if any new key words, update here
                 text_list.append(j)
-                if (j in text_list_for_split) == False:
+                if ((j in text_list_for_split) == False) &((')' in j)  == False):
                     text_list_for_split.append('（' +j+ '）')
         df.at[i, 'restriction'] = (' ').join(text_list)
     return df, text_list_for_split
@@ -65,14 +65,12 @@ def split_item_by_symbol(df):
 
 
 def replace_parentheses(df, split_list):
+    df['sub_content'] = df['content']
     for i in split_list:
-        df['content'] = df['content'].str.replace(i, '')
-        #df['sub_content'] = df['sub_content'].str.replace(i, '')
+        # df['content'] = df['content'].str.replace(i, '')
+        df['sub_content'] = df['sub_content'].str.replace(i, '')
     return df
 
 
-
-
-
-path = '/Users/xinyue/PycharmProjects/cic_peoject/2007_catalog.csv'
+path = '/Users/xinyue/PycharmProjects/cic_project/hand_in/2015/2015_catalog_base.csv'
 read_in_file(path)
